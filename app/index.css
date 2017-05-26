@@ -1,0 +1,28 @@
+body, html {
+  margin: 0 auto;
+  padding: 0 auto;
+  background-image: url("images/pattern.svg");
+}
+
+.container {}
+
+.header {
+  padding: 1em;
+  color: white;
+  background-color: black;
+  text-align: center;
+}
+
+.content {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+}
