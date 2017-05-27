@@ -28,7 +28,7 @@ class Header extends React.Component {
         />
         <Link
           className="button"
-          to={{ pathname: '/search', search: `search=${this.state.searchString}` }}
+          to={{ pathname: '/forecast', search: `search=${this.state.searchString}` }}
         >Get Weather</Link>
       </div>
 
