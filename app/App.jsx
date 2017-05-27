@@ -1,11 +1,21 @@
 const React = require('react');
+const { BrowserRouter, Route, Switch } = require('react-router-dom');
+
+const Index = require('./index/Index');
+const Header = require('./Header');
 
 function App() {
   return (
-    <div className="container">
-      <div className="header">Header</div>
-      <div className="content">Container</div>
-    </div>
+    <BrowserRouter>
+      <div className="container">
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Index} />
+
+          <Route render={() => (<p>Not Found!</p>)} />
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 module.exports = App;

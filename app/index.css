@@ -1,3 +1,4 @@
+
 body, html {
   margin: 0 auto;
   padding: 0 auto;
@@ -7,22 +8,66 @@ body, html {
 .container {}
 
 .header {
-  padding: 1em;
   color: white;
-  background-color: black;
-  text-align: center;
+  background-color: Darkorange;
+  display: -webkit-flex;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  justify-content: flex-end;
 }
 
 .content {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-
+  width: 500px;
+  height: 200px;
   position: absolute;
-  top:0;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-
   margin: auto;
+  text-align: center;
+}
+
+.search-label {
+  font-size: 50px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+.button {
+  color: #e6e6e6;
+  background: ForestGreen;
+  border: none;
+  font-size: 16px;
+  border-radius: 3px;
+  width: 150px;
+  text-align: center;
+  display: block;
+  padding: 7px 0;
+  margin: 17px auto;
+}
+
+.button:hover:enabled {
+  background: linear-gradient(lime, ForestGreen);
+  color: #fff;
+  text-decoration: none;
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.title {
+  align-self: center;
+  margin-right: auto;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.header-search {
+  margin: 17px 5px 17px 5px;
+
+
 }
