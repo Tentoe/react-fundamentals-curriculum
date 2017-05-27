@@ -1,3 +1,4 @@
+/* eslint-env browser */
 const React = require('react');
 const { Link } = require('react-router-dom');
 const PropTypes = require('prop-types');
@@ -16,6 +17,7 @@ class Header extends React.Component {
       searchString: value,
     }));
   }
+
   render() {
     return (
       <div className={this.props.className}>
@@ -29,6 +31,7 @@ class Header extends React.Component {
         <Link
           className="button"
           to={{ pathname: '/forecast', search: `search=${this.state.searchString}` }}
+          onClick={window.location.reload}
         >Get Weather</Link>
       </div>
 
