@@ -1,4 +1,3 @@
-
 body, html {
   margin: 0 auto;
   padding: 0 auto;
@@ -31,7 +30,6 @@ body, html {
 
 .search-label {
   font-size: 50px;
-  margin-bottom: 10px;
   font-weight: bold;
   color: white;
 }
@@ -67,7 +65,18 @@ body, html {
 }
 
 .header-search {
+  display: -webkit-flex;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+.header-search Link, .header-search input {
   margin: 17px 5px 17px 5px;
+}
 
-
+.index-search {
+  margin: 12px;
 }
