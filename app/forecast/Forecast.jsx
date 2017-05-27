@@ -1,7 +1,10 @@
 const React = require('react');
-const api = require('../misc/openweather.api');
 const queryString = require('query-string');
 const PropTypes = require('prop-types');
+const { Link } = require('react-router-dom');
+
+const api = require('../misc/openweather.api');
+const ForecastItem = require('./ForecastItem');
 
 class Forecast extends React.Component {
   constructor(props) {
@@ -24,17 +27,11 @@ class Forecast extends React.Component {
       <div>
         <h1 className="forecast-title">{forecast.city.name}</h1>
         <ul className="forecast-list" >
-          {forecast.list.map((day) => {
-            const date = Date(day.dt);
-            return (
-              <li className="forecast-item" key={day.dt}>
-                <ul>
-                  <li><img className="forecast-icon" src={`./app/images/weather-icons/${day.weather[0].icon}.svg`} alt={`Icon for${day.weather[0].main}`} /></li>
-                  <li className="forecast-date">{date}</li>
-                </ul>
-              </li>
-            );
-          },
+          {forecast.list.map(day => (
+            <Link key={day.dt} to={{ pathname: `/details/${forecast.city.name}`, state: { day } }}>
+              <ForecastItem day={day} />
+            </Link>
+            ),
         )}
         </ul>
       </div>

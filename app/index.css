@@ -93,7 +93,6 @@ li {
 }
 
 .forecast-list{
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -101,6 +100,8 @@ li {
 }
 
 .forecast-item{
+
+  color: black;
   margin: 20px;
   text-align: center;
 }
@@ -120,4 +121,8 @@ li {
 .forecast-date{
   font-size: 24px;
   font-weight: bold;
+  margin: 20px;
+}
+.details-list{
+  text-align: center;
 }
